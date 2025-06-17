@@ -733,10 +733,10 @@ background-color: #001e4d;
   border: none;
 }
 
-/* --- Mobile-Friendly Portfolio Styles --- */
+/* --- Mobile-Friendly Portfolio Styles: Sky Blue & White --- */
 @media (max-width: 600px) {
   body {
-    background: linear-gradient(135deg, #f185dd 0%, #fffbe7 100%);
+    background: linear-gradient(135deg, #87ceeb 0%, #ffffff 100%);
     padding: 0;
     margin: 0;
   }
@@ -751,8 +751,8 @@ background-color: #001e4d;
     font-size: 1.3rem;
     margin-top: 18px;
     margin-bottom: 10px;
-    color: #d16ec0;
-    border-bottom: 2px solid #f185dd;
+    color: #3498db;
+    border-bottom: 2px solid #87ceeb;
     display: inline-block;
     padding-bottom: 2px;
   }
@@ -775,12 +775,12 @@ background-color: #001e4d;
     margin-bottom: 10px;
   }
   .layer h3 {
-    color: #f185dd;
+    color: #3498db;
     font-size: 1.1rem;
     margin-bottom: 6px;
   }
   .btn, .btn2 {
-    background: #f185dd;
+    background: #87ceeb;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -792,7 +792,7 @@ background-color: #001e4d;
     transition: background 0.2s;
   }
   .btn:active, .btn2:active {
-    background: #d16ec0;
+    background: #3498db;
   }
   .modal-content {
     padding: 1rem;
@@ -823,5 +823,6 @@ background-color: #001e4d;
   .social-icons a {
     font-size: 1.7rem;
     margin: 8px;
+    color: #3498db;
   }
 }
