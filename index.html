@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omkar Gurav - Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="oglogo.png" />
+
+  <!-- EmailJS -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="stylesheet.css" />
+
+  <style>
+    .social-icons a {
+      font-size: 30px;
+      margin: 10px;
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #0077b5;
+    }
+    .tab-contents { display: none; }
+    .tab-contents.active-tab { display: block; }
+    .tab-links.active-link {
+      border-bottom: 2px solid #0077b5;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container navbar">
+      <div class="logo" onclick="location.href='#home'" aria-label="Home" role="link" tabindex="0"></div>
+      <nav>
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="header" id="home">
+    <div class="header-text">
+      <p>Engineering Student</p>
+      <h1>Hi, I'm <span>Omkar Raju Gurav</span></h1>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h1 class="sub-title">About Me</h1>
+      <div class="row">
+        <div class="about-col-1">
+          <img src="ogbg.png" alt="Omkar Gurav">
+        </div>
+        <div class="about-col-2">
+          <p>Hi, I'm Omkar Gurav .I’m someone who believes in purpose over comfort, and discipline over ease. Ever since I can remember, I’ve had one clear goal: to serve the nation by becoming an Indian Army officer. </p>
+          <p>I’m a B.Tech student in Computer Science and Engineering at Sharad Institute of Technology in Ichalkaranji, Kolhapur.</p>
+          <p>Along with my studies, I enjoy staying active and playing sports. Football is my favorite</p>
+          <p><strong>DOB:</strong> 13-03-2006<br><strong>Address:</strong> Belagavi, Karnataka</p>
+
+
+          <!-- Tab Links -->
+          <div class="tab-titles">
+            <button class="tab-links active-link" onclick="opentab('skills', event)">Skills</button>
+            <button class="tab-links" onclick="opentab('education', event)">Education</button>
+            <button class="tab-links" onclick="opentab('projects', event)">Projects</button>
+          </div>
+
+          <!-- Tab Content -->
+          <div id="skills" class="tab-contents active-tab">
+            <ul>
+              <li><span>Web Development</span><br>HTML, CSS, JS</li>
+              <li><span>Languages</span><br>C, Python, JavaScript</li>
+            </ul>
+          </div>
+
+          <div id="education" class="tab-contents">
+            <ul>
+              <li><span>2025 - Present</span><br>B.Tech at SITCOE</li>
+              <li><span>2024</span><br>Completed 12th</li>
+              <li><span>2023</span><br>Completed 10th</li>
+            </ul>
+          </div>
+
+          <div id="projects" class="tab-contents">
+            <ul>
+              <li><span>Hotel Menu</span><br>Python project</li>
+              <li><span>Quiz App</span><br>JavaScript quiz app</li>
+              <li><span>Game Code </span><br>Python Game Code Of Tic Tac Toe</li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+
+        <div class="work">
+          <img src="a3.png" alt="Hotel Menu Screenshot" />
+          <div class="layer">
+            <h3>Hotel Menu</h3>
+            <p>Python mini project.</p>
+            <button class="btn" onclick="openModal('hotelMenu')">View Code</button>
+            
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="ogq1.png" alt="Quiz App Screenshot" />
+          <div class="layer">
+            <h3>Quiz App</h3>
+            <p>Interactive JS quiz.</p>
+            <button class="btn" onclick="openModal('quiz')">View Code</button>
+            <button class="btn" onclick="openModal('quizPreview', true)">Live Preview</button>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="oggameop2.png" alt="python game code of Tic Tac Toe" />
+          <div class="layer">
+            <h3>Python Game Code Of Tic Tac Toe</h3>
+        
+            <p>Python fun project.</p>
+            <button class="btn" onclick="openModal('ticTacToe')">View Code</button>
+            
+            
+          </div>
+        </div>
+
+      </div>
+      <button class="btn" onclick="alert('More projects coming soon!')">See More</button>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1>Contact Me</h1>
+          <p><i class="fa-solid fa-envelope"></i> <a href="mailto:omkargurav3654@gmail.com">omkargurav3654@gmail.com</a></p>
+          <p><i class="fa-solid fa-phone"></i> <a href="tel:+919110436202">+91 9110436202</a></p>
+
+          <div class="social-icons">
+            <a href="https://instagram.com/omkar_2xt" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/omkar-gurav-715a10268" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://t.me/OMKARGurav" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://wa.me/+919110436202" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>                                        
+          <a href="ogCV.pdf" class="btn btn2" download>Download CV</a>
+        </div>
+
+        <form class="contact-right" id="contactForm">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn2">Submit</button>
+          <p id="formResponse"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Section -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle">Project Details</h2>
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+      </div>
+      <div class="modal-tabs">
+        <button class="modal-tab active" onclick="switchModalTab('code')">View Code</button>
+        <button class="modal-tab" onclick="switchModalTab('preview')">Live Preview</button>
+      </div>
+      <pre id="codePanel" class="modal-body"></pre>
+      <iframe id="previewPanel" class="iframe-preview" style="display:none;"></iframe>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    emailjs.init("YOUR_PUBLIC_KEY");
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("contactForm");
+      const responseMsg = document.getElementById("formResponse");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+          .then(() => {
+            responseMsg.innerText = "✅ Message sent successfully!";
+            form.reset();
+          }, (error) => {
+            responseMsg.innerText = "❌ Failed to send. Please try again.";
+            console.error("EmailJS Error:", error);
+          });
+      });
+    });
+
+    function opentab(tabname, event) {
+      const tablinks = document.getElementsByClassName("tab-links");
+      const tabcontents = document.getElementsByClassName("tab-contents");
+
+      Array.from(tablinks).forEach(link => link.classList.remove("active-link"));
+      Array.from(tabcontents).forEach(content => content.classList.remove("active-tab"));
+
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
